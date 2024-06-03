@@ -23,8 +23,11 @@ const page = async ({ params: { id } }) => {
           </div>
 
           <p className="text-lg mt-4 text-justify">{juego.description}</p>
-          <h4 className="mt-4 text-xl font-semibold">Contenido</h4>
-          <p className="text-lg mt-4 text-justify">{juego.contenido}</p>
+            <div className="bg-gray-300 rounded-xl mt-2 px-3">
+              <h4 className="mt-4 text-xl font-semibold">Contenido:</h4>
+              <p className="text-lg text-justify">{juego.contenido}</p>
+            </div>
+          
         </div>
       </div>
     </section>

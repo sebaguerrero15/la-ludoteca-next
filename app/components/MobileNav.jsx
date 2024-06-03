@@ -1,9 +1,11 @@
 "use client";
 
+import { FiAlignJustify } from "react-icons/fi";
+
 const MobileNav = () => {
   return (
     <div>
-        mobile
+        <FiAlignJustify className="text-4xl text-white cursor-pointer" />
     </div>
   )
 }

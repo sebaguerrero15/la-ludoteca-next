@@ -2,9 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { TiShoppingCart } from "react-icons/ti";
 import api from "../../api"
+import useStore  from "../../store/useStore"
 
 
 const Destacados = async () => {
+
+  const addToCart = useStore((state) => state.addToCart);
+
   const juegos = await api.list();
 
   return (
@@ -23,7 +27,7 @@ const Destacados = async () => {
               </div>
                   <h3 className="text-bold text-xl">{juego.name}</h3>
                   <p className="text-xl font-semibold">${juego.price}</p>
-                  <button className="flex items-center gap-2 p-3 rounded-xl text-white text-lg bg-red-700 mb-16">
+                  <button onClick={() => addToCart(juego)} className="flex items-center gap-2 p-3 rounded-xl text-white text-lg bg-red-700 mb-16">
                     Agregar
                     <TiShoppingCart className="text-2xl"/>
                   </button>

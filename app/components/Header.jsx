@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Nav from "./Nav";
+import MobileNav from "./MobileNav"
 
 
 const Header = () => {
@@ -27,8 +28,8 @@ const Header = () => {
           <Nav /> 
         </div>
 
-        <div className="md:hidden">
-            mobile nav
+        <div className="md:hidden sm:flex sm:mr-0">
+            <MobileNav />
         </div>
         </div>
 
