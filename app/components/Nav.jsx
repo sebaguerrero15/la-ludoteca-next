@@ -2,8 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaShoppingCart } from "react-icons/fa";
-
-
+import useCartStore from "../store/cartStore"
 
 const menu = [
     {
@@ -22,21 +21,24 @@ const menu = [
 
 const Nav = () => {
     const pathname = usePathname();
+    const carritoItems = useCartStore((state) => state.items);
 
   return (
     <nav className="flex justify-center items-center gap-8 text-lg uppercase">
            {menu.map((item, index) => (
             <Link 
-            className={pathname === item.url ? "text-amber-500" : ""} 
+            className={`${pathname === item.url ? "text-amber-500" : ""}`} 
             key={index} href={item.url}
             >
-                <h2>{item.nombre}</h2>
+                <p className="hover:border-b hover:transition-all duration-50 font-semibold">{item.nombre}</p>
             </Link>
            ))}
            <Link href="/carrito">
             <button>
-            <FaShoppingCart className="text-2xl"/>
-            </button></Link>
+                <span className="text-sm font-bold absolute rounded-full bg-emerald-500 text-white px-1">{carritoItems.length}</span>
+                <FaShoppingCart className="text-3xl"/>
+            </button>
+            </Link>
         </nav>
   )
 }

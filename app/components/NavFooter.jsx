@@ -22,10 +22,10 @@ const Nav = () => {
     const pathname = usePathname();
 
   return (
-    <nav className="grid grid-cols-1 gap-2 items-center text-lg uppercase">
+    <nav className="flex flex-col justify-start gap-2 items-start text-lg uppercase">
            {menu.map((item, index) => (
             <Link 
-            className={pathname === item.url ? "text-amber-500" : ""} 
+            className={`${pathname === item.url ? "text-amber-500" : ""}`} 
             key={index} href={item.url}
             >
                 <h2>{item.nombre}</h2>

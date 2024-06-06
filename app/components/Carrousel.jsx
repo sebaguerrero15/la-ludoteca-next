@@ -8,7 +8,7 @@ import WorkSliderBtns from "../components/WorkSliderBtns";
 const Carrousel = () => {
   return (
    
-    <Swiper className="relative min-h-[80vh w-full] mb-8">
+    <Swiper className="relative min-h-[80vh] mb-8">
       <SwiperSlide>
         <Image src="/banner1.png" width={1500} height={1500} alt="banner 1" className="object-relative" object-cover={true}/>
       </SwiperSlide>
