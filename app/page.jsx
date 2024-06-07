@@ -12,11 +12,11 @@ export const metadata = {
 export default function Home() {
 
   return (
-    <section className="h-full">
+    <main className="h-full">
       <div className="container mx-auto">
         <Carrousel />
         <Destacados />
       </div>
-    </section>
+    </main>
   );
 }

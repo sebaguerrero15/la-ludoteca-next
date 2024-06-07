@@ -2,18 +2,22 @@
 
 import { useMemo } from "react";
 import Image from "next/image";
+import formatCurrency from "../helpers/currency"
 import { FaRegArrowAltCircleLeft, FaRegArrowAltCircleRight } from "react-icons/fa";
+import { TiDelete } from "react-icons/ti";
 import useCartStore  from "../store/cartStore";
 
 function Carrito() {
   const items = useCartStore((state) => state.items);
   const remove = useCartStore((state) => state.removeCart);
-  const totalPago = useMemo(() => items.reduce((acc, item) => acc + item.price, 0), [items]);
+  const increase = useCartStore((state) => state.increaseCart);
+  const decrease = useCartStore((state) => state.decreaseCart);
+  const totalPago = useMemo(() => items.reduce((acc, item) => acc + (item.price * item.quantity), 0), [items]);
 
 
   return (
     <>
-    {items == 0 ? (<p className="min-h-[80vh] mt-12 text-2xl text-center">Tu carrito esta vacio</p>)
+    {items == 0 ? (<p className="min-h-[80vh] mt-12 text-2xl text-center">Tu carrito de compras esta vacio</p>)
       :(<section className="min-h-[80vh]">
         <div className="container mx-auto">
           <h2 className="text-2xl font-bold text-center uppercase m-8">Carrito de Compras</h2>
@@ -27,12 +31,14 @@ function Carrito() {
                 <div className="flex items-center space-x-[120px]">
                   <div className="flex items-center gap-4 text-xl">
                     <p className="text-xl">Cantidad:</p>
-                  <FaRegArrowAltCircleLeft  className="text-3xl" />
-                  <p className="px-2 border-2 border-slate-900">1</p>
-                  <FaRegArrowAltCircleRight className="text-3xl" />
+                  <FaRegArrowAltCircleLeft onClick={() => decrease(item.id)}  className="text-3xl cursor-pointer" />
+                  <p className="px-2 border-2 border-slate-900">{item.quantity}</p>
+                  <FaRegArrowAltCircleRight onClick={() => increase(item.id)} className="text-3xl cursor-pointer" />
                   </div>
-                  <p className="text-xl font-semibold">$ {item.price}</p>
-                  <button onClick={() => remove(item.id)} className="px-3 py-1 font-bold rounded-full text-white bg-red-700">x</button>
+                  <p className="text-xl font-semibold">{formatCurrency(item.price)}</p>
+                  <button onClick={() => remove(item.id)}>
+                    <TiDelete className="text-4xl text-red-600" />
+                  </button>
                   
                 </div>
               </div>
@@ -41,7 +47,7 @@ function Carrito() {
           ))}
           <div className="flex justify-end items-center gap-8 mr-[250px] py-5">
             <p className="text-2xl font-bold border-b-2 border-zinc-950">Total a Pagar:</p>
-            <p className="text-center text-3xl font-bold">$ {totalPago}</p>
+            <p className="text-center text-3xl font-bold">{formatCurrency(totalPago)}</p>
           </div>
         </div>
       </section>

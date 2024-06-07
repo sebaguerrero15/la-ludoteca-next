@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import formatCurrency from "../helpers/currency"
 import toast, {Toaster} from 'react-hot-toast';
 import { TiShoppingCart } from "react-icons/ti";
 import useCartStore  from "../store/cartStore";
@@ -14,12 +15,12 @@ import useCartStore  from "../store/cartStore";
 const Destacados = () => {
   const notify = () => toast.success('Producto Agregado al Carrito de Compras', {
     style: {
-      border: '1px solid #713200',
+      border: '1px solid #000000',
       padding: '16px',
-      color: '#713200',
+      color: '#000000',
     },
     iconTheme: {
-      primary: '#713200',
+      primary: '#000000',
       secondary: '#FFFAEE',
     },
   });
@@ -41,7 +42,7 @@ const Destacados = () => {
                 </Link>
               </div>
                   <h3 className="text-bold text-xl">{juego.name}</h3>
-                  <p className="text-xl font-semibold">${juego.price}</p>
+                  <p className="text-xl font-semibold">{formatCurrency(juego.price)}</p>
 
                   {juego.stock == 0 ? (<button disabled={juego.stock == 0} className="px-3 py-1 rounded-3xl border-2 border-slate-800 text-slate-800 text-lg bg-transparent mb-16">Sin Stock</button>):(
                   <button onClick={() => {addToCart(juego); notify()}} className="flex items-center gap-2 px-3 py-1 rounded-3xl border-2 border-slate-800 hover:bg-sky-950 hover:text-white text-slate-800 text-lg bg-transparent mb-16 transition-all duration-300">

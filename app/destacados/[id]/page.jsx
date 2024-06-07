@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { TiShoppingCart } from "react-icons/ti";
+import formatCurrency from "../../helpers/currency"
+import toast, {Toaster} from 'react-hot-toast';
 import useCartStore from "../../store/cartStore";
 import api from "../../../api"
 
@@ -15,11 +17,23 @@ import api from "../../../api"
 // }
 
 const JuegoId = ({ params: { id } }) => {
+  const notify = () => toast.success('Producto Agregado al Carrito de Compras', {
+    style: {
+      border: '1px solid #000000',
+      padding: '16px',
+      color: '#000000',
+    },
+    iconTheme: {
+      primary: '#000000',
+      secondary: '#FFFAEE',
+    },
+  });
   const addToCart = useCartStore((state) => state.addToCart);
  const juegos = api.fetch(id)
 
   return (
     <section className="container mx-auto">
+      <title>{juegos.name}</title>
       <div className="min-h-[80vh] grid grid-cols-1 gap-4 md:grid-cols-2 justify-center items-center mb-14">
         <div className="mt-12">
           <Image src={juegos.image} alt={juegos.name} width={600} height={600} />
@@ -28,11 +42,11 @@ const JuegoId = ({ params: { id } }) => {
         <div className="flex flex-col">
           <h3 className="text-4xl font-semibold mt-8">{juegos.name}</h3>
           <div className="flex justify-between items-center gap-4">
-            <p className="text-2xl font-semibold mt-6">${juegos.price}</p>
+            <p className="text-2xl font-semibold mt-6">{formatCurrency(juegos.price)}</p>
               <div className="flex justify-center items-center gap-4">
 
               {juegos.stock == 0 ? (<button disabled={juegos.stock == 0} className="flex items-center font-bold mt-4 px-3 py-1 rounded-3xl border-2 border-slate-800 text-slate-800 text-lg bg-transparent transition-all duration-300 uppercase">Sin Stock</button>):(
-                <button onClick={() => addToCart(juegos)} className="flex items-center font-bold mt-4 px-3 py-1 rounded-3xl border-2 border-slate-800 hover:bg-sky-950 hover:text-white text-slate-800 text-lg bg-transparent transition-all duration-300 uppercase">
+                <button onClick={() => {addToCart(juegos); notify()}} className="flex items-center font-bold mt-4 px-3 py-1 rounded-3xl border-2 border-slate-800 hover:bg-sky-950 hover:text-white text-slate-800 text-lg bg-transparent transition-all duration-300 uppercase">
                   Agregar
                   <TiShoppingCart className="text-2xl" />
                 </button >)}
@@ -43,6 +57,7 @@ const JuegoId = ({ params: { id } }) => {
                   Ir al Carrito
                 </button>
                 </Link>
+                <Toaster position="bottom-right" reverseOrder={false} />
               </div>
           </div>
 
