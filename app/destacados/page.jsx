@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import formatCurrency from "../helpers/currency"
-import toast, {Toaster} from 'react-hot-toast';
 import { TiShoppingCart } from "react-icons/ti";
 import useCartStore  from "../store/cartStore";
 
@@ -13,17 +12,7 @@ import useCartStore  from "../store/cartStore";
 // }
 
 const Destacados = () => {
-  const notify = () => toast.success('Producto Agregado al Carrito de Compras', {
-    style: {
-      border: '1px solid #000000',
-      padding: '16px',
-      color: '#000000',
-    },
-    iconTheme: {
-      primary: '#000000',
-      secondary: '#FFFAEE',
-    },
-  });
+ 
   const juegos = useCartStore((state) => state.juegos);
   const addToCart = useCartStore((state) => state.addToCart);
 
@@ -45,12 +34,11 @@ const Destacados = () => {
                   <p className="text-xl font-semibold">{formatCurrency(juego.price)}</p>
 
                   {juego.stock == 0 ? (<button disabled={juego.stock == 0} className="px-3 py-1 rounded-3xl border-2 border-slate-800 text-slate-800 text-lg bg-transparent mb-16">Sin Stock</button>):(
-                  <button onClick={() => {addToCart(juego); notify()}} className="flex items-center gap-2 px-3 py-1 rounded-3xl border-2 border-slate-800 hover:bg-sky-950 hover:text-white text-slate-800 text-lg bg-transparent mb-16 transition-all duration-300">
+                  <button onClick={() => addToCart(juego)} className="flex items-center gap-2 px-3 py-1 rounded-3xl border-2 border-slate-800 hover:bg-sky-950 hover:text-white text-slate-800 text-lg bg-transparent mb-16 transition-all duration-300">
                     Agregar
                     <TiShoppingCart className="text-2xl"/>
                   </button>)}
 
-                  <Toaster position="bottom-right" reverseOrder={false} />
             </li>
           ))}
         </ul>

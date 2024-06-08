@@ -12,23 +12,25 @@ function Carrito() {
   const remove = useCartStore((state) => state.removeCart);
   const increase = useCartStore((state) => state.increaseCart);
   const decrease = useCartStore((state) => state.decreaseCart);
+  const clear = useCartStore((state) => state.clearCart);
   const totalPago = useMemo(() => items.reduce((acc, item) => acc + (item.price * item.quantity), 0), [items]);
+
 
 
   return (
     <>
     {items == 0 ? (<p className="min-h-[80vh] mt-12 text-2xl text-center">Tu carrito de compras esta vacio</p>)
       :(<section className="min-h-[80vh]">
-        <div className="container mx-auto">
+        <div>
           <h2 className="text-2xl font-bold text-center uppercase m-8">Carrito de Compras</h2>
           {items.map((item) => (
             <>
-              <div key={item.id} className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+              <div key={item.id} className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="flex items-center gap-4 mt-4">
                   <Image src={item.image} alt={item.name} width={100} height={100} />
                   <h4 className="text-xl">{item.name}</h4>
                 </div>
-                <div className="flex items-center space-x-[120px]">
+                <div className="flex items-center space-x-[50px] xl:space-x-[120px]">
                   <div className="flex items-center gap-4 text-xl">
                     <p className="text-xl">Cantidad:</p>
                   <FaRegArrowAltCircleLeft onClick={() => decrease(item.id)}  className="text-3xl cursor-pointer" />
@@ -45,9 +47,10 @@ function Carrito() {
               <div className="border-b border-3 border-slate-400 m-4"></div>
             </>
           ))}
-          <div className="flex justify-end items-center gap-8 mr-[250px] py-5">
+          <div className="flex justify-end items-center gap-8 mr-[130px] py-5">
             <p className="text-2xl font-bold border-b-2 border-zinc-950">Total a Pagar:</p>
             <p className="text-center text-3xl font-bold">{formatCurrency(totalPago)}</p>
+            <button onClick={() => clear()} className="ml-12 p-2 font-semibold border-2 border-slate-900 rounded-xl hover:bg-slate-700 hover:text-white transition-all duration-300">Vaciar Carrito</button>
           </div>
         </div>
       </section>

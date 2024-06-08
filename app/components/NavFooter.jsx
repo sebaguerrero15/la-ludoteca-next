@@ -25,7 +25,7 @@ const Nav = () => {
     <nav className="flex flex-col justify-start gap-2 items-start text-lg uppercase">
            {menu.map((item, index) => (
             <Link 
-            className={`${pathname === item.url ? "text-amber-500" : ""}`} 
+            className={`${pathname === item.url ? "text-yellow-400" : ""}`} 
             key={index} href={item.url}
             >
                 <h2>{item.nombre}</h2>

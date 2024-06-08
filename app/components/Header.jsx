@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="py-8 text-white bg-black">
-        <div className="container mx-auto flex items-center">
+        <div className="container flex items-center">
             <div className="flex justify-start px-[120px]">
           {/* imagen logo */}
             <Link href="/">
