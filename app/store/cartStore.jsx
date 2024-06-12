@@ -69,7 +69,7 @@ const useCartStore = create((set) => ({
           icon: "success"
         });
       }
-      <Toaster position="bottom-right" reverseOrder={false} />
+      
     });
   },
 

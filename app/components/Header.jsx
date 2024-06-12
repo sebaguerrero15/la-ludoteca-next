@@ -10,8 +10,8 @@ const Header = () => {
 
   return (
     <header className="py-8 text-white bg-black">
-        <div className="container flex items-center">
-            <div className="flex justify-start px-[120px]">
+        <div className="container flex justify-between items-center">
+            <div className="flex items-center">
           {/* imagen logo */}
             <Link href="/">
             <Image src="/logolaludoteca.png" width={200} height={200} alt="logo web" />
