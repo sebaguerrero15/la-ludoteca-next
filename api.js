@@ -7,7 +7,18 @@ export const db = [
         description: 'Recrea la historia de los emprendedores que compitieron en Birmingham y sus alrededores durante la Revolución Industrial de Inglaterra, entre los años 1770 y 1870. En esta reimplementación de la obra maestra original, Brass: Lancashire, expandirás tu imperio construyendo canales y líneas de ferrocarril, y construirás y desarrollarás varios tipos de industrias, como fábricas algodoneras, minas de carbón, talleres, cervecerías, fundiciones de hierro y alfarerías.',
         price: 59990,
         stock: 0,
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/WKfJWZJcJFA",
+        images: [
+            {
+              original: "/brass.png",
+              thumbnail: "/brass.png",
+            },
+            {
+              original: "https://dementegames.cl/926-large_default/brass-birmingham.jpg",
+              thumbnail: "https://dementegames.cl/926-large_default/brass-birmingham.jpg",
+            }
+          ]
     },
     {
         id: "2",
@@ -17,7 +28,22 @@ export const db = [
         description: 'En el año 2400, la humanidad comienza a terraformar el planeta Marte. Gigantescas corporaciones, patrocinadas por el gobierno mundial de la Tierra, empiezan enormes proyectos para elevar la temperatura, los niveles de oxígeno y la cobertura del planeta por océanos para que el medio ambiente sea habitable. Según avance la terraformación, más y más personas migrarán desde la Tierra para vivir en el planeta rojo. Controla una corporación, juega cartas de proyecto, aumenta tu producción, coloca tus ciudades y áreas verdes sobre el mapa y lucha por los hitos y recompensas. ¿Liderará tu corporación el camino hacia una nueva era de la Humanidad?',
         price: 58990,
         stock: 3,
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/4Js1B57jZ7s",
+        images: [
+            {
+              original: "/terraforming.png",
+              thumbnail: "/terraforming.png",
+            },
+            {
+              original: "https://dementegames.cl/603-large_default/terraforming-mars.jpg",
+              thumbnail: "https://dementegames.cl/603-large_default/terraforming-mars.jpg",
+            },
+            {
+              original: "https://dementegames.cl/602-large_default/terraforming-mars.jpg",
+              thumbnail: "https://dementegames.cl/602-large_default/terraforming-mars.jpg",
+            }
+          ]
     },
     {
         id: "3",
@@ -27,7 +53,26 @@ export const db = [
         description: 'En el interior del valle encantado de Everdell, bajo las ramas de los imponentes árboles, riachuelos sinuosos y cavidades musgosas, una civilización de criaturas del bosque está floreciendo y expandiéndose. Desde Everfrost hasta Bellsong, los años han ido pasando y ha llegado la hora de asentarse en nuevos territorios y de establecer nuevas ciudades. En Everdell te convertirás en el líder de un grupo de criaturas que intentarán tener éxito en esta misión. Hay edificios que construir, alegres personajes que conocer y eventos que organizar. Tienes un año ajetreado por delante. ¿Brillará más el sol en tu ciudad antes de que la luna del invierno se alce?',
         price: 63990,
         stock: 5,
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/NHtMmjM5M2E",
+        images: [
+            {
+              original: "/everdell.png",
+              thumbnail: "/everdell.png",
+            },
+            {
+              original: "https://www.cardgame.cl/cdn/shop/files/Everdell-EN-2_1024x1024@2x.jpg?v=1712867046",
+              thumbnail: "https://www.cardgame.cl/cdn/shop/files/Everdell-EN-2_1024x1024@2x.jpg?v=1712867046",
+            },
+            {
+              original: "https://diadejuegos.com/6229-large_default/everdell.jpg",
+              thumbnail: "https://diadejuegos.com/6229-large_default/everdell.jpg",
+            },
+            {
+              original: "https://www.cardgame.cl/cdn/shop/files/everdell_detalle_prado_jpg_1024x1024@2x.webp?v=1712866980",
+              thumbnail: "https://www.cardgame.cl/cdn/shop/files/everdell_detalle_prado_jpg_1024x1024@2x.webp?v=1712866980",
+            }
+          ]
     },
     {
         id: "4",
@@ -37,7 +82,18 @@ export const db = [
         contenido: "10 cartas de inicio Imperiales, 10 cartas de inicio Rebeldes, 90 cartas de galaxia, 10 cartas de piloto del Borde Exterior, 20 cartas de base, 1 medidor de Equilibrio de la Fuerza, 50 contadores de daño, 20 contadores de recursos, 1 indicador de la Fuerza.",
         price: 38990,  
         stock: 7,
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/IKuQbd5QAyc",
+        images: [
+            {
+              original: "/swtdg.png",
+              thumbnail: "/swtdg.png",
+            },
+            {
+              original: "https://dementegames.cl/7106-large_default/star-wars-the-deckbuilding-game.jpg",
+              thumbnail: "https://dementegames.cl/7106-large_default/star-wars-the-deckbuilding-game.jpg",
+            }
+          ]
     },
     {
         id: "5",
@@ -46,7 +102,22 @@ export const db = [
         description: 'Desarrolla la ciencia, mejora tu ejército, construye prestigiosos edificios ¡y conduce a tu civilización hacia la victoria. En 7 Wonders Duel cada jugador es el líder de una civilización que construirá Estructuras y erigirá Maravillas. Las Estructuras y las Maravillas construidas por cada jugador componen su ciudad',
         price: 28990,  
         stock: 15,
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/OzfZ8wMbLDM",
+        images: [
+            {
+              original: "/7wondersduel.png",
+              thumbnail: "/7wondersduel.png",
+            },
+            {
+              original: "https://movieplay03.akamaized.net/5405-thickbox_default/7-wonders-duel.jpg",
+              thumbnail: "https://movieplay03.akamaized.net/5405-thickbox_default/7-wonders-duel.jpg",
+            },
+            {
+              original: "https://movieplay03.akamaized.net/5406-thickbox_default/7-wonders-duel.jpg",
+              thumbnail: "https://movieplay03.akamaized.net/5406-thickbox_default/7-wonders-duel.jpg",
+            }
+          ]
     },
     {
         id:"6",
@@ -55,7 +126,18 @@ export const db = [
         description: 'Nombrado en honor al famoso castillo francés de Carcassonne, el juego de mesa Carcassonne es un divertido juego de colocación de piezas y personajes. Los jugadores extraen fichas al azar que representan terrenos de la campiña francesa: una ciudad, un camino, un monasterio o terreno agrícola. En el juego hay que poner las fichas, de tal modo que no contravengan las reglas del juego, para ir construyendo el paisaje de nuestra particular región. Además, una vez colocada la ficha, deberemos elegir si poner encima de la misma un “meeple” (que son los elementos que representan a los personajes de nuestra región; Caballeros en las ciudades, salteadores de caminos, monjes en los monasterios y granjeros para nuestros espacios agrícolas). Los meeples son, a fin de cuentas, los que nos permitan ganar puntos de victoria y conseguir el ansiado triunfo.',
         price: 29990,  
         stock: 26,
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/zIeyB3ykf1s",
+        images: [
+            {
+              original: "/carcassonne.png",
+              thumbnail: "/carcassonne.png",
+            },
+            {
+              original: "https://dementegames.cl/5943-large_default/carcassonne.jpg",
+              thumbnail: "https://dementegames.cl/5943-large_default/carcassonne.jpg",
+            }
+        ]
     },
     {
         id: "7",
@@ -64,7 +146,18 @@ export const db = [
         description: 'Catan es un juego de mesa para toda la familia que se ha convertido en un fenómeno mundial. Desde su aparición en Alemania ha vendido más que muchos de los juegos más tradicionales. Se trata de un juego que aúna la estrategia, la astucia y la capacidad para negociar y en el que los jugadores tratan de colonizar una isla, Catán, rica en recursos naturales. Construyendo pueblos, estableciendo rutas comerciales, etc… Catan ha vendido más de 2 millones de ejemplares en Europa y América. Por si esto no fuera bastante, ha sido galardonado en Alemania y Estados Unidos como Juego del Año. El juego básico de Catan, a la venta desde hace más de 10 años en España, ha marcado un hito en toda Europa en cuanto a juego de planificación, colaboración y, por supuesto, diversión. No hace falta comentar que es la única pieza indispensable de Catan en tu ludoteca. A partir del básico se abre todo el abanico de expansiones que la isla de Catán te ofrece.',
         price: 34990, 
         stock: 53, 
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/RIEyJpNxugg",
+        images: [
+            {
+              original: "/catan.png",
+              thumbnail: "/catan.png",
+            },
+            {
+              original: "https://www.updown.cl/wp-content/uploads/2023/09/catan-desplegado.jpg",
+              thumbnail: "https://www.updown.cl/wp-content/uploads/2023/09/catan-desplegado.jpg",
+            }
+        ]
     },
     {
         id: "8",
@@ -73,7 +166,18 @@ export const db = [
         description: 'El juego de cartas más contagioso del mundo. En el hospital Nuestra Señora de Tranjis, saltan las alarmas cuando los novatos del laboratorio se dan cuenta demasiado tarde de que los contenedores de muestras no estaban vacíos como pensaban. En su interior contienen brotes de virus experimentales que ahora campan a sus anchas por todo el centro y sólo tú puedes detenerlos. Enfréntate a la pandemia y compite para ser el primero en erradicar los virus logrando aislar un cuerpo sano. Ético o no, todos los medios a tu alcance son válidos para ganar. Usa tu astucia para alzarte con la victoria boicoteando a tus rivales.',
         price: 21990,  
         stock: 47,
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/knf9MqQoif0",
+        images: [
+            {
+              original: "/virus.png",
+              thumbnail: "/virus.png",
+            },
+            {
+              original: "https://www.dmesa.cl/wp-content/uploads/2021/09/juegos-de-mesa-virus-dmesa-2.jpg",
+              thumbnail: "https://www.dmesa.cl/wp-content/uploads/2021/09/juegos-de-mesa-virus-dmesa-2.jpg",
+            }
+        ]
     },
     {
         id: "9",
@@ -82,7 +186,22 @@ export const db = [
         description: 'Diriges un equipo de valientes Exploradores, en una expedición a una exótica isla llena de peligros y tesoros. De repente, el volcán que corona este exuberante arrecife, hasta ahora dormido, ¡ha entrado en erupción! La tierra comienza a temblar y la isla se hunde, lenta e inexorablemente, en el mar. Debes salvar a tu equipo si quieres ganar la partida. El objetivo del juego es conseguir que tus Exploradores lleguen a tierra firme, con la mayor cantidad de tesoros posible. Al final de la partida, se sumarán los puntos, que están impresos en la base, de los Exploradores que estén a salvo, y el jugador con más puntos será el ganador.',
         price: 31990,  
         stock: 28,
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/8oP2xwdTlvk",
+        images: [
+            {
+              original: "/theisland.png",
+              thumbnail: "/theisland.png",
+            },
+            {
+              original: "https://cdnx.jumpseller.com/vudu-gaming/image/9498802/resize/480/480?1657760633",
+              thumbnail: "https://cdnx.jumpseller.com/vudu-gaming/image/9498802/resize/480/480?1657760633",
+            },
+            {
+              original: "https://cdnx.jumpseller.com/vudu-gaming/image/9498803/resize/480/480?1657760633",
+              thumbnail: "https://cdnx.jumpseller.com/vudu-gaming/image/9498803/resize/480/480?1657760633",
+            }
+        ]
     },
     {
         id: "10",
@@ -91,7 +210,22 @@ export const db = [
         description: 'Azul  invita a los artistas del azulejo a embellecer las paredes del Palacio Real de Évora. Cuando Manuel I el Afortunado, rey de Portugal, visitó el Palacio de la Alhambra, quedó cautivado por la imponente belleza de la decoración, formada por losetas de cerámica de procedencia árabe a las que llamaban “azulejos”. Aún fascinado por el esplendor del interior de la Alhambra, a su regreso a Portugal ordenó inmediatamente que las paredes de su palacio en Évora fueran decoradas del mismo modo. ¡Elige con cuidado tu estrategia para convertirte en el artista preferido del rey!',
         price: 39990,  
         stock: 16,
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/xW609WKcO7o",
+        images: [
+            {
+              original: "/azul.png",
+              thumbnail: "/azul.png",
+            },
+            {
+              original: "https://cdnx.jumpseller.com/juegodemesa/image/8592639/resize/635/635?1700132358",
+              thumbnail: "https://cdnx.jumpseller.com/juegodemesa/image/8592639/resize/635/635?1700132358",
+            },
+            {
+              original: "https://cdnx.jumpseller.com/juegodemesa/image/8592640/resize/635/635?1700132358",
+              thumbnail: "https://cdnx.jumpseller.com/juegodemesa/image/8592640/resize/635/635?1700132358",
+            }
+        ]
     },
     {
         id: "11",
@@ -100,16 +234,46 @@ export const db = [
         description: '¡Cada día llegan más criaturas y nuevas ideas al apeadero de Newleaf! Siendo la primera ciudad oficial de Everdell, Newleaf se ha convertido en un destino floreciente con numerosas y emocionantes oportunidades que descubrir y explorar. ¡Atrae visitantes entusiastas a tu ciudad, haz tus reservas, viaja lejos con tus billetes y construye la ciudad más próspera que Everdell haya visto jamás!. Newleaf añade 59 nuevas cartas de criatura y estructura al mazo principal y amplia en gran medida las opciones estratégicas y las posibles combinaciones. Utilizando las nuevas fichas de «ocupado» doradas, estas cartas se pueden combinar con las cartas del juego base para crear nuevas y apasionantes sinergias. Las cartas de visitante añaden una nueva manera de obtener puntos al final de la partida y los billetes y fichas de reserva hacen que el momento de tomar decisiones sea más crítico que nunca. Prepárate para experimentar un Everdell completamente renovado que te seguirá deleitando y sorprendiendo durante muchas estaciones más. ¡Bienvenido a Newleaf!',
         price: 66590, 
         stock: 2, 
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/TGiHPGeXSGM",
+        images: [
+            {
+              original: "/newleaf.png",
+              thumbnail: "/newleaf.png",
+            },
+            {
+              original: "https://www.entrejuegos.cl/14016-medium_default/everdell-newleaf.jpg",
+              thumbnail: "https://www.entrejuegos.cl/14016-medium_default/everdell-newleaf.jpg",
+            },
+            {
+              original: "https://www.entrejuegos.cl/14014-medium_default/everdell-newleaf.jpg",
+              thumbnail: "https://www.entrejuegos.cl/14014-medium_default/everdell-newleaf.jpg",
+            }
+        ]
     },
     {
         id: "12",
         name: 'Imperium Classics',
-        image: '/imperium-classics.png',
+        image: '/imperium.png',
         description: 'Un juego de construcción de civilizaciones asimétrico basado en cartas para 1-4 jugadores, que muestra el ascenso y la caída de algunas de las civilizaciones más grandes de la historia y la leyenda.',
         price: 39990,
         stock: 10,  
-        quantity: 1
+        quantity: 1,
+        video: "https://www.youtube.com/embed/CJjlrB4fUpM",
+        images: [
+            {
+              original: "/imperium.png",
+              thumbnail: "/imperium.png",
+            },
+            {
+              original: "https://www.magicsur.cl/20258-thickbox_default/imperium-classics.jpg",
+              thumbnail: "https://www.magicsur.cl/20258-thickbox_default/imperium-classics.jpg",
+            },
+            {
+              original: "https://www.magicsur.cl/20257-thickbox_default/imperium-classics.jpg",
+              thumbnail: "https://www.magicsur.cl/20257-thickbox_default/imperium-classics.jpg",
+            }
+        ]
     }
     ]
 

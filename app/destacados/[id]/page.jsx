@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { TiShoppingCart } from "react-icons/ti";
 import formatCurrency from "../../helpers/currency"
 import toast, {Toaster} from 'react-hot-toast';
 import useCartStore from "../../store/cartStore";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css"
 import api from "../../../api"
 
 
@@ -36,7 +37,12 @@ const JuegoId = ({ params: { id } }) => {
       <title>{juegos.name}</title>
       <div className="min-h-[80vh] grid grid-cols-1 gap-4 md:grid-cols-2 justify-center items-center mb-14">
         <div className="mt-12">
-          <Image src={juegos.image} alt={juegos.name} width={600} height={600} />
+            <ImageGallery 
+            items={juegos.images} 
+            showPlayButton={false} 
+            showFullscreenButton={false}
+            showNav={false}
+            />
         </div>
 
         <div className="flex flex-col">
@@ -66,9 +72,11 @@ const JuegoId = ({ params: { id } }) => {
               <h4 className="mt-4 text-xl font-semibold">Contenido:</h4>
               <p className="text-lg text-justify">{juegos.contenido}</p>
             </div>
-          
         </div>
       </div>
+        <div className="flex justify-center my-10">
+          <iframe src={juegos.video} frameborder="0" width={800} height={800}></iframe>
+        </div>
     </section>
   );
 };

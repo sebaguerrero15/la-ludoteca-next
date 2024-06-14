@@ -25,9 +25,9 @@ const Destacados = () => {
         <ul className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center items-center mt-6 ">
           {juegos.map((juego) => (
             <li key={juego.id} className=" flex flex-col justify-center items-center">
-              <div className="flex flex-col text-center relative items-center w-[250px] h-[250px]">
+              <div className="flex flex-col text-center relative items-center">
                 <Link href={`/destacados/${juego.id}`}>
-                <Image src={juego.image} alt={juego.name} fill className="object-relative" />
+                <Image src={juego.image} alt={juego.name} width={280} height={280} />
                 </Link>
               </div>
                   <h3 className="text-bold text-xl">{juego.name}</h3>

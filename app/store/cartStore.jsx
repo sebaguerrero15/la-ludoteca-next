@@ -1,9 +1,10 @@
 import {db} from "../../api.js"
 import { create } from "zustand";
+import {persist} from "zustand/middleware"
 import Swal from "sweetalert2"
 
 
-const useCartStore = create((set) => ({
+const useCartStore = create(persist((set) => ({
   juegos: db,
   items: [],
 
@@ -71,9 +72,15 @@ const useCartStore = create((set) => ({
       }
       
     });
+   
   },
+  
 
-  })
+  }),
+  {name: 'laludoteca-storage', }
+
+)
+  
 );
 
 export default useCartStore;

@@ -1,30 +1,32 @@
 "use client";
 
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css"
 import "swiper/css";
 import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper/modules';
+
+
+const images = [
+  {
+    original: "/banner1.png"
+  },
+  {
+    original: "/banner2.png"
+  },
+  {
+    original: "/banner3.png"
+  }
+]
 
 const Carrousel = () => {
   return (
-   
-    <Swiper pagination={{
-      type: 'fraction',
-    }}
-    navigation={true}
-    modules={[Pagination, Navigation]}
-    className="mySwiper">
-      <SwiperSlide>
-        <Image src="/banner1.png" width={1500} height={1500} alt="banner 1"/>
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image src="/banner2.png" width={1500} height={1500} alt="banner 2"/>
-      </SwiperSlide>
-      <SwiperSlide>
-        <Image src="/banner3.png" width={1500} height={1500} alt="banner 3"/>
-      </SwiperSlide>
-    </Swiper>
+
+    <ImageGallery 
+    items={images}
+    showPlayButton={false} 
+    showFullscreenButton={false} 
+    autoPlay={true}
+    />
    
   );
 };
